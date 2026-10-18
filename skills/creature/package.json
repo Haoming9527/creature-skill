@@ -1,0 +1,23 @@
+{
+  "name": "creature",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Specification-driven creature authoring, review and portable delivery.",
+  "license": "MIT",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/validate.mjs",
+    "inspect-surface": "node scripts/inspect-surface.mjs",
+    "preview": "node scripts/render.mjs",
+    "export": "node scripts/export.mjs",
+    "look": "node scripts/look.mjs",
+    "silhouette": "node scripts/silhouette.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check-package.mjs"
+  },
+  "dependencies": { "three": "0.180.0" },
+  "devDependencies": { "esbuild": "0.25.10", "playwright": "1.58.2", "gltf-validator": "2.0.0-dev.3.10" }
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore an articulated creature and its source references.">
+  <title>Creature study</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./viewer.css">
+</head>
+<body>
+  <main class="studio">
+    <section class="stage" aria-label="Interactive creature scene">
+      <header class="stage-header"><span class="wordmark">Creature</span><span id="category">Living study</span></header>
+      <div id="canvas" tabindex="0" aria-label="3D creature. Drag to orbit, scroll or pinch to zoom. Use view buttons for fixed angles."></div>
+      <div id="loading" role="status">Preparing the specimen…</div>
+      <div id="part-label" hidden><span></span><small></small></div>
+      <div class="stage-toolbar" aria-label="View controls">
+        <div class="segmented" aria-label="Surface view"><button id="material-view" aria-pressed="true">Material</button><button id="clay-view" aria-pressed="false">Clay</button></div>
+        <button id="reset-view" class="quiet">Reset view</button>
+      </div>
+      <div class="camera-views" aria-label="Camera angle"><button data-view="three-quarter" aria-pressed="true">¾</button><button data-view="side" aria-pressed="false">Side</button><button data-view="front" aria-pressed="false">Front</button><button data-view="rear" aria-pressed="false">Rear</button><button data-view="above" aria-pressed="false">Above</button></div>
+      <p class="stage-hint">Drag to orbit <span>·</span> Scroll or pinch to zoom</p>
+    </section>
+    <aside class="field-guide" aria-label="Creature details and controls">
+      <div class="specimen-heading"><p id="identity" class="secondary"></p><h1 id="name">Creature study</h1><p id="description"></p></div>
+      <section class="controls" aria-labelledby="movement-heading"><h2 id="movement-heading">Bring it to life</h2>
+        <label class="select-control" for="pose">Movement<select id="pose"><option value="idle">At rest</option><option value="walk">Walk</option><option value="alert">Attentive</option></select></label>
+        <label class="range-control" for="speed"><span>Movement speed<output id="speed-value">1×</output></span><input id="speed" type="range" min="0" max="2" step="0.05" value="1"></label>
+        <label class="range-control" for="jaw"><span>Open jaw<output id="jaw-value">0%</output></span><input id="jaw" type="range" min="0" max="1" step="0.01" value="0"></label>
+        <label class="range-control" for="lookX"><span>Turn head<output id="lookX-value">0°</output></span><input id="lookX" type="range" min="-1" max="1" step="0.01" value="0"></label>
+        <label class="range-control" for="lookY"><span>Tilt head<output id="lookY-value">0°</output></span><input id="lookY" type="range" min="-1" max="1" step="0.01" value="0"></label>
+        <div class="check-row"><label><input id="breathing" type="checkbox" checked> Breathing</label><label><input id="paused" type="checkbox"> Pause</label></div>
+      </section>
+      <section class="inspection" aria-labelledby="inspect-heading"><h2 id="inspect-heading">Look closer</h2><label class="select-control" for="part">Body part<select id="part"><option value="">Whole creature</option></select></label><label class="check-control"><input id="labels" type="checkbox" checked> Show attached label</label><p id="part-description" class="secondary">Choose a body part to locate it as the creature moves.</p></section>
+      <details class="reference-panel"><summary>About this study</summary><p id="review-note">Visual and anatomical review required.</p><dl id="facts"></dl><div id="references"></div><p id="interpretation" class="secondary"></p></details>
+      <section class="downloads" aria-label="Downloads"><h2>Make it your own</h2><button id="download-glb" class="primary">Download animated GLB <span aria-hidden="true">↓</span></button><div class="download-links"><button id="download-spec">Specification</button><button id="download-preview">Preview image</button><a href="./source.zip" download>Editable source</a></div><p class="secondary">The specification keeps shape, rig and movement together.</p></section>
+      <footer><span id="model-stat"></span><span id="status" role="status" aria-live="polite"></span></footer>
+    </aside>
+  </main>
+  <script type="module" src="./viewer.js"></script>
+</body>
+</html>

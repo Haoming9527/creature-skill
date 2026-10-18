@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "category": "living",
+  "bodyPlan": "ungulate-quadruped",
+  "seed": 314159,
+  "proportions": {
+    "scale": 1,
+    "torsoLength": 1,
+    "torsoWidth": 1,
+    "torsoDepth": 1,
+    "neckLength": 1,
+    "headLength": 1,
+    "legLength": 1,
+    "tailLength": 1
+  },
+  "supportedMovements": [
+    "idle",
+    "walk"
+  ],
+  "attachments": [
+    {
+      "id": "head",
+      "region": "head"
+    },
+    {
+      "id": "jaw",
+      "region": "jaw"
+    },
+    {
+      "id": "neck",
+      "region": "neck"
+    },
+    {
+      "id": "torso",
+      "region": "torso"
+    },
+    {
+      "id": "tail",
+      "region": "tail"
+    },
+    {
+      "id": "front-left-foot",
+      "region": "front-left-foot"
+    },
+    {
+      "id": "front-right-foot",
+      "region": "front-right-foot"
+    },
+    {
+      "id": "hind-left-foot",
+      "region": "hind-left-foot"
+    },
+    {
+      "id": "hind-right-foot",
+      "region": "hind-right-foot"
+    }
+  ],
+  "id": "thoroughbred",
+  "name": "Bay Thoroughbred gelding",
+  "prompt": "Create a naturalistic adult bay Thoroughbred gelding with moderate body condition, a dark mane and tail, black lower legs and unshod single hooves. Show a grounded walk, subtle breathing and ear motion. Provide clay views for anatomical review.",
+  "profile": "thoroughbred",
+  "identity": {
+    "commonName": "Domestic horse",
+    "scientificName": "Equus caballus",
+    "breed": "Thoroughbred",
+    "sex": "gelding",
+    "lifeStage": "adult",
+    "bodyCondition": "5/9 equine scale",
+    "hornStatus": "none"
+  },
+  "materials": {
+    "coatColor": "#5b2a1c",
+    "secondaryColor": "#211c19",
+    "muzzleColor": "#3b3029",
+    "hoofColor": "#383531",
+    "eyeColor": "#1d120b",
+    "roughness": 0.52,
+    "pattern": "solid"
+  },
+  "features": {
+    "mane": true,
+    "tailTuft": false,
+    "horns": false,
+    "udder": false
+  },
+  "behavior": {
+    "breathingRate": 0.17,
+    "walkSpeed": 1.2,
+    "strideScale": 1,
+    "headYawLimit": 0.3,
+    "headPitchLimit": 0.25,
+    "jawLimit": 0.1
+  },
+  "sources": [
+    {
+      "id": "hoof-anatomy",
+      "title": "Purdue Extension: Hoof Anatomy, Care and Management in Livestock",
+      "url": "https://extension.purdue.edu/extmedia/ID/ID-321-W.pdf",
+      "accessed": "2026-10-18",
+      "note": "External reference only; no illustration is redistributed. Cattle have paired principal hoof digits; horses have one continuous hoof."
+    },
+    {
+      "id": "gait-glossary",
+      "title": "University of Minnesota: Gait glossary",
+      "url": "https://vanat.ahc.umn.edu/gaits/glossary.html",
+      "accessed": "2026-10-18",
+      "note": "Walk timing and contact terminology. Procedural motion is a simplified interpretation, not motion capture."
+    },
+    {
+      "id": "thoroughbred-breed",
+      "title": "Oklahoma State University: Thoroughbred Horses",
+      "url": "https://breeds.okstate.edu/horses/thoroughbred-horses",
+      "accessed": "2026-10-18",
+      "note": "Breed conformation and reference photographs; historical text is used only for morphology, not current breed statistics. Photographs are not redistributed."
+    },
+    {
+      "id": "horse-conformation",
+      "title": "University of Minnesota Extension: Conformation of the horse",
+      "url": "https://extension.umn.edu/agriculture/animals-and-livestock/horse/conformation-of-the-horse",
+      "accessed": "2026-10-18",
+      "note": "External shape, head/neck relationship and limb landmarks. These qualitative guidelines do not define validated ranges for the model parameters."
+    },
+    {
+      "id": "horse-condition",
+      "title": "University of Minnesota Extension: Caring for the overweight horse",
+      "url": "https://extension.umn.edu/agriculture/animals-and-livestock/horse/caring-for-the-overweight-horse",
+      "accessed": "2026-10-18",
+      "note": "Equine 1-to-9 condition score context; target score remains subject to visual review."
+    },
+    {
+      "id": "bay-genetics",
+      "title": "UC Davis Veterinary Genetics Laboratory: Agouti (Bay/Black)",
+      "url": "https://vgl.ucdavis.edu/test/agouti-horse",
+      "accessed": "2026-10-18",
+      "note": "Bay coloration and distribution of dark pigment. The generated coat is an appearance choice, not a claim of a tested genotype."
+    },
+    {
+      "id": "equine-treadmill",
+      "title": "Crook et al. (2010): The effect of treadmill speed and gradient on equine hindlimb muscle activity",
+      "url": "https://beva.onlinelibrary.wiley.com/doi/abs/10.1111/j.2042-3306.2010.00222.x",
+      "accessed": "2026-10-18",
+      "note": "Primary-study abstract: six horses on a treadmill at walk speeds of 1.4-1.6 m/s and differing gradients. Context only; it does not establish the model stride length, stance fraction or hoof pitch, nor a Thoroughbred breed range. No article assets are bundled."
+    }
+  ],
+  "evidence": [
+    {
+      "trait": "identity",
+      "status": "inferred",
+      "sourceIds": [
+        "thoroughbred-breed"
+      ],
+      "notes": "An adult Thoroughbred gelding is the selected subject. This is an original generic specimen, not a named registered horse."
+    },
+    {
+      "trait": "anatomy",
+      "status": "inferred",
+      "sourceIds": [
+        "horse-conformation",
+        "thoroughbred-breed"
+      ],
+      "notes": "Long head and neck, defined withers, deep chest, hindquarter muscles and different front/hind joint layouts guide the original surface."
+    },
+    {
+      "trait": "proportions",
+      "status": "inferred",
+      "sourceIds": [
+        "horse-conformation",
+        "thoroughbred-breed"
+      ],
+      "notes": "Body proportions follow qualitative reference relationships. The configurable range is an engineering envelope, not population measurement data."
+    },
+    {
+      "trait": "feet",
+      "status": "observed",
+      "sourceIds": [
+        "hoof-anatomy"
+      ],
+      "notes": "Each foot has one continuous hoof capsule. The model is unshod and retains hoof/pastern distinction."
+    },
+    {
+      "trait": "coat",
+      "status": "observed",
+      "sourceIds": [
+        "bay-genetics"
+      ],
+      "notes": "Brown body with dark mane, tail and lower limb points; no claim of genetic testing. Exact color and highlights are original material choices."
+    },
+    {
+      "trait": "gait",
+      "status": "inferred",
+      "sourceIds": [
+        "gait-glossary",
+        "equine-treadmill"
+      ],
+      "notes": "Four-beat walking is interpreted from the glossary with equine treadmill study context. The baseline 1.5 m full stride, 1.2 m/s speed, .65 front/hind stance fractions, approximately 8.9-degree peak absolute swing hoof pitch, and joint/body trajectories are authored settings, not measurements established by the cited abstract or validated Thoroughbred limits. Review the complete cycle and actual hoof-shell contact."
+    },
+    {
+      "trait": "body-condition",
+      "status": "inferred",
+      "sourceIds": [
+        "horse-condition"
+      ],
+      "notes": "Target moderate 5/9 equine condition; inspect muscle and rib contours rather than treating the number as a computed measurement."
+    }
+  ],
+  "notes": [
+    "Original procedural anatomy study; anatomical and visual approval pending.",
+    "This profile represents an adult gelding and does not implement reproductive anatomy.",
+    "Head tracking and jaw motion are deliberately bounded demonstrations, not a complete equine behavior repertoire.",
+    "No trot, canter, gallop, jumping or anatomical internal organs are supported.",
+    "Mane and tail use portable geometry; hair strands are an approximation.",
+    "Reference images are linked, not bundled. Original geometry/material generation is covered by the repository license.",
+    "Gait distances, stance fractions and hoof flexion are original authored animation controls informed by linked study context. Numeric contact checks do not establish anatomical or visual approval."
+  ]
+}

@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "category": "living",
+  "bodyPlan": "ungulate-quadruped",
+  "seed": 271828,
+  "proportions": {
+    "scale": 1,
+    "torsoLength": 1,
+    "torsoWidth": 1,
+    "torsoDepth": 1,
+    "neckLength": 1,
+    "headLength": 1,
+    "legLength": 1,
+    "tailLength": 1
+  },
+  "supportedMovements": [
+    "idle",
+    "walk"
+  ],
+  "attachments": [
+    {
+      "id": "head",
+      "region": "head"
+    },
+    {
+      "id": "jaw",
+      "region": "jaw"
+    },
+    {
+      "id": "neck",
+      "region": "neck"
+    },
+    {
+      "id": "torso",
+      "region": "torso"
+    },
+    {
+      "id": "tail",
+      "region": "tail"
+    },
+    {
+      "id": "front-left-foot",
+      "region": "front-left-foot"
+    },
+    {
+      "id": "front-right-foot",
+      "region": "front-right-foot"
+    },
+    {
+      "id": "hind-left-foot",
+      "region": "hind-left-foot"
+    },
+    {
+      "id": "hind-right-foot",
+      "region": "hind-right-foot"
+    }
+  ],
+  "id": "holstein",
+  "name": "Holstein dairy cow",
+  "prompt": "Create a naturalistic adult female polled Holstein dairy cow in moderate body condition, with black-and-white markings. Show a grounded walk, subtle breathing, ear and tail motion, and a small jaw movement. Provide clay views for anatomical review.",
+  "profile": "holstein",
+  "identity": {
+    "commonName": "Domestic cattle",
+    "scientificName": "Bos taurus",
+    "breed": "Holstein",
+    "sex": "female",
+    "lifeStage": "adult",
+    "bodyCondition": "3/5 dairy scale",
+    "hornStatus": "polled"
+  },
+  "materials": {
+    "coatColor": "#f3eee3",
+    "secondaryColor": "#20231f",
+    "muzzleColor": "#a47b75",
+    "hoofColor": "#414039",
+    "eyeColor": "#4c3020",
+    "roughness": 0.78,
+    "pattern": "piebald"
+  },
+  "features": {
+    "mane": false,
+    "tailTuft": true,
+    "horns": false,
+    "udder": true
+  },
+  "behavior": {
+    "breathingRate": 0.22,
+    "walkSpeed": 1,
+    "strideScale": 1,
+    "headYawLimit": 0.3,
+    "headPitchLimit": 0.2,
+    "jawLimit": 0.14
+  },
+  "sources": [
+    {
+      "id": "hoof-anatomy",
+      "title": "Purdue Extension: Hoof Anatomy, Care and Management in Livestock",
+      "url": "https://extension.purdue.edu/extmedia/ID/ID-321-W.pdf",
+      "accessed": "2026-10-18",
+      "note": "External reference only; no illustration is redistributed. Cattle have paired principal hoof digits; horses have one continuous hoof."
+    },
+    {
+      "id": "gait-glossary",
+      "title": "University of Minnesota: Gait glossary",
+      "url": "https://vanat.ahc.umn.edu/gaits/glossary.html",
+      "accessed": "2026-10-18",
+      "note": "Walk timing and contact terminology. Procedural motion is a simplified interpretation, not motion capture."
+    },
+    {
+      "id": "holstein-breed",
+      "title": "Holstein Association USA: Holstein 101",
+      "url": "https://www.holsteinusa.com/holstein_breed/holstein101.html",
+      "accessed": "2026-10-18",
+      "note": "Breed appearance, mature size, and polled trait. Reference target only; the specimen is original and does not reproduce a named animal."
+    },
+    {
+      "id": "holstein-scorecard",
+      "title": "Purebred Dairy Cattle Association unified scorecard",
+      "url": "https://www.holsteinusa.com/pdf/PDCA_Scorecard.pdf",
+      "accessed": "2026-10-18",
+      "note": "Head, dairy frame, udder and breed identification review; judging guidance is not a measured population envelope."
+    },
+    {
+      "id": "dairy-condition",
+      "title": "Penn State Extension: Learn To Score Body Condition",
+      "url": "https://extension.psu.edu/learn-to-score-body-condition",
+      "accessed": "2026-10-18",
+      "note": "Dairy 1-to-5 scale and visible pelvis/loin landmarks; target score requires visual review, not a software-certified assessment."
+    },
+    {
+      "id": "dairy-walk-kinematics",
+      "title": "Tijssen et al. (2021): Kinematic gait characteristics of straight line walk in clinically sound dairy cows",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8294546/",
+      "accessed": "2026-10-18",
+      "note": "Seventeen Swedish Red/Holstein cows walking at their selected pace on concrete; front/hind stance-fraction evidence informs gait interpretation. Study results do not define breed ranges or validate this procedural animation. Reference only; no figures, video or data files are bundled."
+    },
+    {
+      "id": "cattle-treadmill",
+      "title": "Nuss et al. (2015): Kinetics of heifers and cows walking on an instrumented treadmill",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25626619/",
+      "accessed": "2026-10-18",
+      "note": "Primary-study abstract: ten cows and nine heifers, reported separately. Cow-subgroup means provide stride/speed/cadence context, not prescribed settings or Holstein limits. Reference only; no article assets are bundled."
+    }
+  ],
+  "evidence": [
+    {
+      "trait": "identity",
+      "status": "inferred",
+      "sourceIds": [
+        "holstein-breed"
+      ],
+      "notes": "Adult female dairy animal is the selected reference profile; the generated specimen is not a measured individual."
+    },
+    {
+      "trait": "anatomy",
+      "status": "inferred",
+      "sourceIds": [
+        "holstein-scorecard",
+        "hoof-anatomy"
+      ],
+      "notes": "Broad muzzle, angular dairy frame, four limbs and an udder are modeled from breed and anatomical guidance. Original control surface requires review."
+    },
+    {
+      "trait": "proportions",
+      "status": "inferred",
+      "sourceIds": [
+        "holstein-breed",
+        "holstein-scorecard"
+      ],
+      "notes": "Baseline size and body relationships use breed references. All multipliers are engineering controls; their accepted interval is not a scientifically established range."
+    },
+    {
+      "trait": "feet",
+      "status": "observed",
+      "sourceIds": [
+        "hoof-anatomy"
+      ],
+      "notes": "Two principal weight-bearing claws per foot, separated by an interdigital cleft. Verify both digits in geometry."
+    },
+    {
+      "trait": "coat",
+      "status": "observed",
+      "sourceIds": [
+        "holstein-breed"
+      ],
+      "notes": "Black-and-white piebald coat is supported. Exact patch placement is seeded and invented, not copied from reference photographs."
+    },
+    {
+      "trait": "gait",
+      "status": "inferred",
+      "sourceIds": [
+        "gait-glossary",
+        "dairy-walk-kinematics",
+        "cattle-treadmill"
+      ],
+      "notes": "Four-beat walking is interpreted from the glossary and cow-study context. The .68/.64 front/hind stance fractions are informed by study results; the 1.4 m baseline full stride, 1.0 m/s speed, approximately 6.7-degree peak absolute swing hoof pitch, and joint/body trajectories are authored animation settings. These are not motion capture or validated Holstein limits; review the complete cycle and actual hoof-shell contact."
+    },
+    {
+      "trait": "horn-status",
+      "status": "observed",
+      "sourceIds": [
+        "holstein-breed"
+      ],
+      "notes": "Polled is a documented Holstein trait. This selected individual is naturally hornless; that is not a claim all Holsteins are polled."
+    },
+    {
+      "trait": "body-condition",
+      "status": "inferred",
+      "sourceIds": [
+        "dairy-condition"
+      ],
+      "notes": "Target 3/5, moderate dairy condition. Pelvis and loin landmarks must be checked in clay renders."
+    },
+    {
+      "trait": "marking-layout",
+      "status": "artistic",
+      "sourceIds": [],
+      "notes": "Deterministic original patch arrangement; no external image texture."
+    }
+  ],
+  "notes": [
+    "Original procedural anatomy study; anatomical and visual approval pending.",
+    "Selected as an adult cow in mid-lactation. The udder is an external simplified representation, not internal anatomy.",
+    "Jaw movement is a limited illustrative motion and does not simulate chewing or rumination.",
+    "Breathing, blinking, ears and tail are interpreted motion. No live animal measurements or motion capture are claimed.",
+    "Reference images are linked, not bundled. Original geometry/material generation is covered by the repository license.",
+    "Gait distances, stance fractions and hoof flexion are original authored animation controls informed by linked study context. Numeric contact checks do not establish anatomical or visual approval."
+  ]
+}

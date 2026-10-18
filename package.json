@@ -1,0 +1,19 @@
+{
+  "name": "creature-skill",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Procedural, articulated creatures from editable specifications.",
+  "license": "MIT",
+  "scripts": {
+    "setup": "npm --prefix skills/creature ci",
+    "dev": "npm --prefix skills/creature run dev --",
+    "build": "npm --prefix skills/creature run build --",
+    "validate": "npm --prefix skills/creature run validate --",
+    "preview": "npm --prefix skills/creature run preview --",
+    "export": "npm --prefix skills/creature run export --",
+    "test": "npm --prefix skills/creature test",
+    "check": "npm --prefix skills/creature run check"
+  },
+  "engines": { "node": ">=22" }
+}

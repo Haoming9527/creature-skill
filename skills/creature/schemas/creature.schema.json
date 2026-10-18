@@ -1,0 +1,416 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Haoming9527/creature-skill/spec/creature-v1",
+  "title": "Creature specification v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "name",
+    "prompt",
+    "category",
+    "bodyPlan",
+    "profile",
+    "seed",
+    "identity",
+    "proportions",
+    "materials",
+    "features",
+    "behavior",
+    "supportedMovements",
+    "attachments",
+    "sources",
+    "evidence",
+    "notes"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[a-z][a-z0-9-]*$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "living",
+        "extinct",
+        "fictional"
+      ]
+    },
+    "bodyPlan": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 4294967295
+    },
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "commonName",
+        "scientificName",
+        "breed",
+        "sex",
+        "lifeStage",
+        "bodyCondition",
+        "hornStatus"
+      ],
+      "properties": {
+        "commonName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scientificName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "breed": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sex": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lifeStage": {
+          "type": "string",
+          "minLength": 1
+        },
+        "bodyCondition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hornStatus": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "proportions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scale",
+        "torsoLength",
+        "torsoWidth",
+        "torsoDepth",
+        "neckLength",
+        "headLength",
+        "legLength",
+        "tailLength"
+      ],
+      "properties": {
+        "scale": {
+          "type": "number",
+          "minimum": 0.25,
+          "maximum": 3
+        },
+        "torsoLength": {
+          "type": "number",
+          "minimum": 0.25,
+          "maximum": 3
+        },
+        "torsoWidth": {
+          "type": "number",
+          "minimum": 0.25,
+          "maximum": 3
+        },
+        "torsoDepth": {
+          "type": "number",
+          "minimum": 0.25,
+          "maximum": 3
+        },
+        "neckLength": {
+          "type": "number",
+          "minimum": 0.25,
+          "maximum": 3
+        },
+        "headLength": {
+          "type": "number",
+          "minimum": 0.25,
+          "maximum": 3
+        },
+        "legLength": {
+          "type": "number",
+          "minimum": 0.25,
+          "maximum": 3
+        },
+        "tailLength": {
+          "type": "number",
+          "minimum": 0.25,
+          "maximum": 3
+        }
+      }
+    },
+    "materials": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "coatColor",
+        "secondaryColor",
+        "muzzleColor",
+        "hoofColor",
+        "eyeColor",
+        "roughness",
+        "pattern"
+      ],
+      "properties": {
+        "coatColor": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "secondaryColor": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "muzzleColor": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "hoofColor": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "eyeColor": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "roughness": {
+          "type": "number",
+          "minimum": 0.15,
+          "maximum": 1
+        },
+        "pattern": {
+          "type": "string",
+          "enum": [
+            "solid",
+            "piebald"
+          ]
+        }
+      }
+    },
+    "features": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mane",
+        "tailTuft",
+        "horns",
+        "udder"
+      ],
+      "properties": {
+        "mane": {
+          "type": "boolean"
+        },
+        "tailTuft": {
+          "type": "boolean"
+        },
+        "horns": {
+          "type": "boolean"
+        },
+        "udder": {
+          "type": "boolean"
+        }
+      }
+    },
+    "behavior": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "breathingRate",
+        "walkSpeed",
+        "strideScale",
+        "headYawLimit",
+        "headPitchLimit",
+        "jawLimit"
+      ],
+      "properties": {
+        "breathingRate": {
+          "type": "number",
+          "minimum": 0.05,
+          "maximum": 0.6
+        },
+        "walkSpeed": {
+          "type": "number",
+          "minimum": 0.05,
+          "maximum": 1.5
+        },
+        "strideScale": {
+          "type": "number",
+          "minimum": 0.6,
+          "maximum": 1.2
+        },
+        "headYawLimit": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.5
+        },
+        "headPitchLimit": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.35
+        },
+        "jawLimit": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 0.3
+        }
+      }
+    },
+    "supportedMovements": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "idle",
+          "walk"
+        ]
+      },
+      "minItems": 2,
+      "uniqueItems": true
+    },
+    "attachments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "region"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "region": {
+            "type": "string",
+            "enum": [
+              "head",
+              "jaw",
+              "neck",
+              "torso",
+              "tail",
+              "front-left-foot",
+              "front-right-foot",
+              "hind-left-foot",
+              "hind-right-foot"
+            ]
+          }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "title",
+          "url",
+          "accessed",
+          "note"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string",
+            "minLength": 1,
+            "format": "uri"
+          },
+          "accessed": {
+            "type": "string",
+            "minLength": 1,
+            "format": "date"
+          },
+          "note": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "trait",
+          "status",
+          "sourceIds",
+          "notes"
+        ],
+        "properties": {
+          "trait": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "observed",
+              "inferred",
+              "disputed",
+              "artistic"
+            ]
+          },
+          "sourceIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "notes": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  }
+}

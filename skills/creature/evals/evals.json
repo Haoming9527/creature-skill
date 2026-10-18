@@ -1,0 +1,96 @@
+{
+  "skill_name": "creature",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a naturalistic adult Holstein dairy cow: female, naturally polled, black-and-white coat, moderate body condition, standing calmly and able to walk. I want a browser scene I can orbit, a clay view to inspect the anatomy, jaw and head controls, a GLB with idle and walking animation, editable source and specification, and previews from several angles. Check the feet and the entire walk before delivery. Record references and distinguish software checks from visual approval.",
+      "expected_output": "A reproducible cow scene and editable specification/source, animated GLB, matching clay and material previews, and evidence/validation report. Cow identity, female dairy form, horn status, paired main hoof geometry, four-beat walk and functional controls are checked. Visual/anatomy approval and unmeasured physical-device performance are not invented.",
+      "files": [],
+      "expectations": [
+        "Valid editable specification records the requested identity and references.",
+        "Browser scene and editable source are delivered with working head, jaw, clay and walk controls.",
+        "GLB contains skinned geometry and Idle/Walk clips and reloads independently.",
+        "All four feet have two separate principal hoof digits.",
+        "Multi-angle clay and material previews plus a full walking cycle are inspected.",
+        "Software checks are separated from anatomy approval and physical-device performance claims.",
+        "A walking stance foot remains planted against the visible stationary floor, with the contact frame reported."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Build a realistic adult bay Thoroughbred gelding at moderate body condition. Keep the horse's proportions and leg joints believable, with black mane, tail and lower legs. Deliver an interactive browser viewer with orbit/zoom, clay/material views, idle and walk, speed, head direction, jaw and body labels, plus editable source/specification, an animated GLB and multi-angle previews. Check that the exported model loads independently and report what still needs human review.",
+      "expected_output": "A horse-specific scene with single principal hooves, bay coat, correct identity notes and proportion references; controllable supported movement, source/specification, animated GLB and previews. Independent export reload and structural checks are documented separately from visual judgment.",
+      "files": [],
+      "expectations": [
+        "Valid editable specification preserves adult bay Thoroughbred gelding identity and references.",
+        "Horse has four single principal hooves, black mane, tail and lower legs.",
+        "Viewer controls and attached labels affect the intended parts.",
+        "GLB has independently reloaded skinning and Idle/Walk clips.",
+        "Multi-angle clay/material previews and complete walk checks are delivered.",
+        "Remaining anatomy, visual and physical-device review gaps are stated."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Use the supplied horse specification. Make its legs 5 percent longer and its tail 5 percent longer, retaining the same individual, seed and bay appearance. Keep the original file intact. Update the model, joint positions, attachments and walking reach together, then deliver the revised specification, source, viewer, animated GLB and matched before/after clay previews. Tell me whether the proportions still need reference and visual review.",
+      "expected_output": "A new specification with requested leg/tail multipliers and preserved input, seed and appearance. Rebuilt geometry, rig, attachments and movement demonstrate the change; full-cycle and export checks are rerun. The report does not treat engineering parameter acceptance as evidence of biological accuracy.",
+      "files": [
+        "examples/horse.json"
+      ],
+      "expectations": [
+        "Original input is unchanged; revised spec has legLength and tailLength multiplied by 1.05 with seed and appearance preserved.",
+        "Geometry, joint positions, attachments and walking reach are rebuilt rather than only scaling the rendered mesh.",
+        "Revised viewer, source, specification and animated GLB are delivered.",
+        "Matched before/after clay views are provided and reviewed.",
+        "Motion and export checks are rerun; accepted parameters are not claimed to prove anatomical realism."
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "I want a reconstruction of an extinct animal, Psittacosaurus. Explain which visible traits you would base on preserved evidence, which on inference, and which remain disputed or artistic. Give sources for the traits you discuss. Can the current creature pipeline build and validate that body, or does it need an extension? Do not substitute another animal just to produce a demo.",
+      "expected_output": "An extinct-category evidence/reconstruction proposal with relevant trait-level sources and uncertainty, plus an honest unsupported-body assessment and extension work. This is a routing test; no unvalidated horse/cow relabeling or unsupported claim of a completed Psittacosaurus model.",
+      "files": [],
+      "expectations": [
+        "Uses extinct category and separates preserved evidence, inference, disputed interpretation and artistic choices trait by trait.",
+        "Provides directly relevant sources and dates for the discussed traits.",
+        "Clearly states Psittacosaurus body is unsupported and does not relabel a cow or horse.",
+        "Describes the extension and review work needed without claiming a validated reconstruction."
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "For a fictional creature in my story, use these design notes as the source: a horse-shaped guardian with an obsidian coat, pale amber eyes, no horn, four ordinary hooves, and slow deliberate walking. Keep those defining features, and tell me what the current pipeline can generate versus what needs additional authoring. Classify it under fictional and treat the notes as a portrayal, not a real species.",
+      "expected_output": "A fictional-category design/capability response that follows the supplied portrayal, preserves the no-horn and four-hoof requirements, separates source fidelity from biological claims, and does not invent extra public categories. Any proposed generation respects actual module support.",
+      "files": [],
+      "expectations": [
+        "Uses fictional category and treats supplied design notes as portrayal rather than biological evidence.",
+        "Preserves obsidian coat, pale amber eyes, no horn, four hooves and slow walk.",
+        "Distinguishes supported horse-derived generation from features that require additional authoring."
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Take the supplied living horse specification and give it six legs and a glowing horn, but keep it classified as a realistic Thoroughbred. Do not overwrite my source file.",
+      "expected_output": "A short explanation of the conflict and clarification between retaining realistic anatomy or creating a fictional derivative. Original file remains intact; no silent category change or unsupported six-leg generation. Additional body/feature work is acknowledged even if a fictional derivative is chosen.",
+      "files": [
+        "examples/horse.json"
+      ],
+      "expectations": [
+        "Identifies conflict between six legs/glowing horn and living Thoroughbred anatomy.",
+        "Asks whether to retain realism or create a fictional derivative without silently changing category.",
+        "Preserves input file and acknowledges unsupported limbs/horn extension work."
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Create a realistic adult barn owl that can fold its wings and perch. Before building, tell me whether the installed creature skill has the correct body, rig and feather capabilities. If it does not, preserve the intended animal and describe the extension needed instead of turning a horse into an owl.",
+      "expected_output": "Living-category routing with an explicit unsupported bird module/wing/feather capability assessment and a concrete extension/review path. No false claim that an ungulate skeleton implements owl anatomy or a delivered validated owl.",
+      "files": [],
+      "expectations": [
+        "Identifies absent bird, wing-folding and feather capabilities.",
+        "Preserves barn owl intent without substituting a horse or cow.",
+        "Describes anatomical, rigging, feather and movement review required for extension."
+      ]
+    }
+  ]
+}
